@@ -1,8 +1,9 @@
 <html>
 	<head>
+		<meta charset="utf8" />
 		<title>Griffgrabber</title>
 		<script src="js/dev/jquery-1.7.1.js"></script>
-				<script data-main="/js/main.js" src="/js/require.js"></script>
+		<script data-main="js/main.js" src="js/require.js"></script>
 
 	</head>
 
@@ -18,13 +19,10 @@
 			</div>
 
 			<div id="tutorial">
-				<img src="/images/griffgame/start.png" alt="" />
+				<img src="images/griffgame/start.png" alt="" />
 				<br>
 
 				<div class="buttonContainer">
-					<? if (user()->isGuest): ?>
-						<p style="text-align: center">Husk å logge inn hvis du vil være med på highscoren</p>
-					<? endif ?>
 					<input id="thebutton" type="button" class="g-button" value="Start spillet nå!" />
 				</div>
 			</div>
@@ -86,11 +84,5 @@
 
 		<div class="g-barTitle">Progresjon</div>
 		<canvas id="thehunt_picture" width="230" height="216"></canvas>
-
-		<div id="highscorelist">
-			<? $this->renderPartial('_highscore', array(
-				'highscorelist' => $highscorelist,
-			))  ?>
-		</div>
 	</body>
 </html>
